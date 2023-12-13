@@ -1,0 +1,21 @@
+<!-- views/projetos.ejs -->
+<link rel="stylesheet" href="/stylesheets/projetos.css">
+<%- include('./partials/header.ejs') %>
+
+<section>
+  <% projetos.forEach(p => { %>
+    <div class="caixa-projetos">
+      <div class="projetos">
+        <a href="<%- '/projetos/' + p.rota %>" target="_self">
+          <img src="public/images/<%- p.imagem %>" alt="<%- p.alt %>">
+          <h5><%- p.nome %></h5>
+        </a>
+      </div>
+    </div>
+  <% }) %>
+</section>
+
+<footer><%- include('./partials/footer.ejs') %></footer>
+
+</body>
+</html>

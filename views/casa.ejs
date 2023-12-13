@@ -1,0 +1,20 @@
+<!-- views/casa.ejs -->
+<link rel="stylesheet" href="/stylesheets/projetoscasas.css">
+<%- include('./partials/header.ejs') %>
+
+<section>
+  <div class="container-Post">
+    <div class="nome-imagem">
+      <h3><%= nome %></h3>
+      <img src="/public/images/<%= imagem %>" alt="casa" class="left-image">
+    </div>
+    <p class="text"><%= texto %></p>
+  </div>
+</section>
+
+<section>
+  <footer><%- include('./partials/footer.ejs') %></footer>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!-- admin.ejs -->
+<link rel="stylesheet" href="/stylesheets/admin.css">
+
+<%- include('./partials/header.ejs') %>
+<section>
+    
+     <div class="container">  
+    <form id="projeto" action=<%=action%> method="post">
+      <h3>Quick Contact</h3>
+      <h4>Armazena as informações de contato do usuário no banco de dados.</h4>
+      <% if (typeof projeto =='undefined') {
+        projeto = {
+        nome : "",
+        texto: "",
+        rota: ""
+        }
+      }%>
+        
+      <fieldset>
+        <label>Nome</label>
+        <input name="nome" value="<%= typeof projeto.nome !== 'undefined' ? projeto.nome : 'Nome' %>" type="text" tabindex="1" required autofocus>
+      </fieldset>
+        
+      <fieldset>
+        <label>Texto</label>
+        <input name="texto" value="<%= typeof projeto.texto !== 'undefined' ? projeto.texto : 'Texto' %>" type="texto" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <label>Rota</label>
+        <input name="texto" value="<%= typeof projeto.rota !== 'undefined' ? projeto.rota : 'Rota' %>" type="rota" tabindex="3" required>
+      </fieldset>
+      
+    </form>
+
+
+  </div>
+  
+  </section>
+  </body>
+  </html>
+  
+  <!--<div class="admin-container">
+        <h2>Adicionar novo projeto</h2>
+      <% if (typeof projeto =='undefined') {
+        projeto = {
+        nome : "",
+        texto: "",
+        imagem: "",
+        rota: ""
+
+        }
+      }%>
+      
+        <form action="/admin" method="post" enctype="multipart/form-data">
+          <h5>Nome do Projeto:</h5>
+            <input type="text" value="<%= typeof projeto.nome !== 'undefined' ? projeto.nome : 'Nome' %>" id="nome" name="nome" required>
+          <h5>Informações do Projeto:</h5>
+            <textarea id="texto" value="<%= typeof projeto.texto !== 'undefined' ? projeto.texto : 'Texto' %>" name="texto" required></textarea>
+          <h5>Imagem do Projeto:</h5>
+            <input type="file" value="<%= typeof projeto.imagem !== 'undefined' ? projeto.imagem : 'Imagem' %>" id="imagem" name="imagem" accept="image/*" required>
+          <h5>Rota do Projeto:</h5>
+            <input type="text" value="<%= typeof projeto.rota !== 'undefined' ? projeto.rota : 'Rota' %>" id="rota" name="rota" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>-->
